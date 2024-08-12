@@ -1,0 +1,33 @@
+#
+#A job applicant takes a training test, the following information was obtained: 
+# total number of questions asked 
+# and the number of questions answered correctly. 
+# It is requested to create a program that enters the two data by keyboard 
+# and reports its level according to the percentage of correct answers obtained,
+# and knowing that:
+
+# Maximum level: Percentage>=90%.
+# Medium level: Percentage >=75% and <90%.
+# Regular level: Percentage >=50% and <75%.
+# Out of level: Percentage <50%.
+
+#
+
+number_questions = int(input('Enter the number of questions:'))
+answers_correctly = int(input('Questions answered correctly:'))
+
+percentage = ( answers_correctly * 100 ) / number_questions 
+
+if percentage >=90:
+    print('Maximum level')
+else:
+    if percentage >= 75:
+        if percentage < 90:
+            print('Medium level')
+        else:
+            if percentage >= 50:
+                if percentage < 75:
+                    print('Regular level')
+                else:
+                    if percentage < 50:
+                        print('Out of level')
